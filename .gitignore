@@ -158,6 +158,9 @@ publish/
 *.nuget.props
 *.nuget.targets
 
+# NuGet Deployment Stuff
+*.nuspec
+
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
