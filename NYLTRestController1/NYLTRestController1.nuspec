@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>NYLT.RestController</id>
+    <version>1.1.1</version>
+    <title>NYLT Rest Controller</title>
+    <authors>Aroon Narayanan</authors>
+    <owners>Aroon Narayanan</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A basic CRUD REST controller for NYLT CampHub servers.</description>
+    <releaseNotes>Added new POST method.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags></tags>
+  </metadata>
+</package>
