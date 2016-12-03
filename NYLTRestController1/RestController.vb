@@ -124,31 +124,6 @@ Public Class RestController
         End Try
     End Function
 
-    ''' <summary>
-    ''' Upload a given scout image to an NYLT CampHub server via POST command.
-    ''' </summary>
-    ''' <param name="URL">The service endpoint to which to POST.</param>
-    ''' <param name="ImageToSend">The scout image to POST.</param>
-    ''' <param name="Name">The name by which the file is labelled in the POST request.</param>
-    ''' <returns>A boolean indicating whether or not the POST response succeeded.</returns>
-    Public Async Function PostImageAsync(URL As String, ImageToSend As StorageFile, Name As String) As Task(Of Boolean)
-        Dim upload_uri = New Uri(Host & URL)
-        Try
-            Dim client As New HttpClient()
-            Dim formcontent As New HttpMultipartFormDataContent
-            Dim imagecontent As New HttpStreamContent(Await ImageToSend.OpenSequentialReadAsync)
-            formcontent.Add(imagecontent, Name, ImageToSend.Name)
-            Dim response = Await client.PostAsync(upload_uri, formcontent)
-            If response.IsSuccessStatusCode Then
-                Return True
-            Else
-                Return False
-            End If
-        Catch
-            Return False
-        End Try
-    End Function
-
 
     ''' <summary>
     ''' Upload a given image to a given URL via form-multipart POST command.
